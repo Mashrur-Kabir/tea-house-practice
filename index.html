@@ -25,6 +25,9 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        // we can use the gradients that is frequently used here like this
+                        'gradient-s': "#FF8938",
+                        'gradient-e': "#F00",
                     }
                 }
             }
@@ -39,24 +42,24 @@
     </style>
 </head>
 
-<body class="font-manrope">
+<body class="font-manrope"> 
 
+<!-- HEADER -->
     <header class="container mx-auto">
-        <div class="hero">
-            <div class="hero-content flex-col lg:flex-row mt-12 lg:mt-0">
+        <div class="mt-24">
+            <div class="flex justify-between items-center flex-col lg:flex-row mt-12 lg:mt-0">
                 <div class="text-center lg:text-left">
                     <h1 class="text-6xl leading-[4.1rem] lg:text-[5rem] lg:leading-[6.25rem] font-extrabold">It's good <br>
                         tea time at The <br> Tea House</h1>
                     <p class="py-6 leading-7 [word-spacing:2.5px]">
                         Tea and Botanical Solutions Supplier Give Optimum <br> Satisfaction To Your Taste Buds.
                     </p>
-                    <button class="btn btn-primary rounded-lg">Explore More</button>
+                    <button class="btn bg-gradient-to-r from-gradient-s to-gradient-e text-white rounded-lg">Explore More <i class="fa-sharp fa-solid fa-turn-up"></i></button>
                 </div>
                 <div>
                     <img
-                    src="images/banner.png"
-                    class="max-w-sm" />
-                    <div class="flex justify-center items-center gap-5 drop-shadow-lg bg-white w-64 px-6 py-5 mx-auto lg:mx-0">
+                    src="images/banner.png"/>
+                    <div class="flex justify-center items-center relative lg:-top-28 lg:left-20 gap-5 rounded-lg drop-shadow-lg bg-white w-64 px-6 py-5 mx-auto lg:mx-0">
                         <i class="fa-solid fa-star text-4xl text-amber-500"></i>
                         <div>
                             <h3 class="text-3xl">5.00</h3>
@@ -68,6 +71,7 @@
         </div>
     </header>
 
+<!-- MAIN -->
     <main class="container mx-auto">
         <!-- featured section -->
         <section class="text-center px-9 lg:px-0 my-24">
@@ -158,7 +162,9 @@
                 <div>
                     <h2 class="text-5xl font-extrabold text-white">Meet Our Super <br> Clients</h2>
                     <p class="text-white mt-5 lg:pr-32">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                    <button class="btn bg-white rounded-lg mt-8">Show More</button>
+                    <button class="btn bg-white rounded-lg mt-8">
+                        <span class="bg-gradient-to-r from-[#FF8938] to-[#F00] bg-clip-text text-transparent">Show More</span>
+                    </button>
                 </div>
             </div>
 
@@ -198,8 +204,57 @@
         </section>
     </main>
 
-    <footer>
+<!-- FOOTER -->
+    <footer class="bg-base-200 text-base-content px-5 py-5 lg:px-56 lg:py-36">
+        <div class="flex flex-col lg:flex-row justify-between mb-10">
+            <img class="w-16 mx-auto md:mx-0" src="images/cup.png" alt="">
+            <p class="flex items-center gap-3 justify-center lg:flex-none">
+                <span class="text-xl font-medium">Ready to get strated?</span>
+                <button class="btn bg-gradient-to-r from-gradient-s to-gradient-e text-white rounded-lg">Get Started</button>
+            </p>
+        </div>
 
+        <div class="footer">
+            <div>
+                <h6 class="footer-title">Services</h6>
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+            </div>
+            <div>
+                <h6 class="footer-title">Company</h6>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+            </div>
+            <div>
+                <h6 class="footer-title">Legal</h6>
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+            </div>
+            <form>
+                <h6 class="footer-title">Newsletter</h6>
+                <fieldset class="">
+                    <label class="label">
+                    <span class="label-text">Enter your email address</span>
+                    </label>
+                    <div class="flex items-end">
+                        <input
+                            type="text"
+                            placeholder="urname@site.com"
+                            class="px-4 py-3 bg-transparent rounded-none outline-none border-b-2 border-cyan-600" />
+                        <button class="ml-4 btn btn-primary rounded-full"><i class="fa-sharp fa-solid fa-right-long"></i></button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="mt-20 text-center text-sm lg:text-[1rem] font-semibold">
+            <p>Copyright © ${new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+        </div>
     </footer>
 </body>
 
